@@ -41,7 +41,7 @@ pipeline {
             steps {
                 withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'AwsAccessKey', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')])
                 {
-                    dir('terraform-files') {
+                    dir('tarraform-file') {
                     sh 'sudo chmod 600 cp.pem'
                     sh 'terraform init'
                     sh 'terraform validate'
